@@ -12,7 +12,7 @@
  */
  
  /*Make a copy of the following template spreadsheet 
- https://docs.google.com/spreadsheets/d/1fBU5t9VGoFPQ3kawShDHTmBfXz_MMsf3g-MuyD7893Q/edit#gid=0 
+ https://docs.google.com/spreadsheets/d/1F0JdXrHIScqV4wq0d1XSzSL1mQSF8jZOfkiBy9w2tlE/edit#gid=0 
  Replace the following url with the copied sheet. */
 var SPREADSHEET_URL = 'SPREADSHEET_URL';
 
