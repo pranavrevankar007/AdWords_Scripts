@@ -10,10 +10,11 @@
  * Developed by: Pranav Revankar
  * Marketing Analyst, Freshdesk
  */
-
- //Make a copy of this sheet as this one will be in "View-Only" mode ("File-->Make a Copy..)
- //Replace the following url with the copied sheet.
-var SPREADSHEET_URL = 'https://docs.google.com/spreadsheets/d/1fBU5t9VGoFPQ3kawShDHTmBfXz_MMsf3g-MuyD7893Q/edit#gid=0';
+ 
+ /*Make a copy of the following template spreadsheet 
+ https://docs.google.com/spreadsheets/d/1fBU5t9VGoFPQ3kawShDHTmBfXz_MMsf3g-MuyD7893Q/edit#gid=0 
+ Replace the following url with the copied sheet. */
+var SPREADSHEET_URL = 'SPREADSHEET_URL';
 
 function main() {
   
