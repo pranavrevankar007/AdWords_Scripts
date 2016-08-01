@@ -92,7 +92,7 @@ function main() {
   clearAdgroup(sheet3,i);
 
 //Code to send the link of spreadsheet to various email_ids. Uncomment if using it
-/*var email = ['email_id','email_id'];      //Replace email_id with recipient mail ids
+/*var email = ['RECIPIENT_EMAIL','RECIPIENT_EMAIL'];      //Replace email_id with recipient mail ids
 for (var i=0; i<2 ;i++)                   //change i to number of recipients
 {   
    MailApp.sendEmail({
