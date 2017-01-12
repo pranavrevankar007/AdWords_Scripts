@@ -22,32 +22,34 @@ function main() {
   var spreadsheet = SpreadsheetApp.openByUrl(SPREADSHEET_URL);
   spreadsheet.setSpreadsheetTimeZone(AdWordsApp.currentAccount().getTimeZone());
   
-   var sheet0 = spreadsheet.getSheets()[0];
+   var sheet0 = spreadsheet.getSheetByName("Campaign 7");
   sheet0.getRange(1, 22, 1, 1).setValue(new Date());
   
-   var sheet1 = spreadsheet.getSheets()[1];
+   var sheet1 = spreadsheet.getSheetByName("Campaign 30");
   sheet1.getRange(1, 22, 1, 1).setValue(new Date());
   
-  var sheet2 = spreadsheet.getSheets()[2];
+  var sheet2 = spreadsheet.getSheetByName("AdGroup 7");
   sheet2.getRange(1, 23, 1, 1).setValue(new Date());
   
-  var sheet3 = spreadsheet.getSheets()[3];
+  var sheet3 = spreadsheet.getSheetByName("AdGroup 30");
   sheet3.getRange(1, 23, 1, 1).setValue(new Date());
   
-  // If you want to segregate your campaigns based on location, features, people who handle them etc.
-  // Label them accordingly and replace "Label_Name" with your label. Uncomment the line if you are using label
-  var adgroupIterator = AdWordsApp.adGroups()
-  //.withCondition("LabelNames CONTAINS_ANY ['Label_Name']")  
-  .withCondition("Status=ENABLED")
-  .orderBy("CampaignName")
-  .orderBy("CampaignType")
-  .get();
+  /* If you want to segregate your campaigns based on location, features, people who handle them etc.
+  Label them accordingly and replace "Label_Name" with your label. Uncomment the line if you are using label */
+  
   var campaignIterator = AdWordsApp.campaigns()
   //.withCondition("LabelNames CONTAINS_ANY ['Label_Name']") 
   .withCondition("Status=ENABLED")
   .orderBy("CampaignType")
   .get();
    
+ var adgroupIterator = AdWordsApp.adGroups()
+  //.withCondition("LabelNames CONTAINS_ANY ['Label_Name']")  
+  .withCondition("Status=ENABLED")
+  .orderBy("CampaignName")
+  .orderBy("CampaignType")
+  .get();
+ 
   var one = getDateStringInPast(1);
   var seven = getDateStringInPast(7);
   var eight = getDateStringInPast(8);
